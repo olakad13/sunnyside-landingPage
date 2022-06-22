@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+$body-font: 'Barlow', serif;
+$header-font: 'Fraunces', serif;
+
+@mixin flex($flex-direction:row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+*{
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+body {
+    padding: 0;
+    margin: 0;
+    border-style: 18px;
+    font-family: $body-font;
+}
+
+// header styling
+#header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    background-image: url(../images/desktop/image-header.jpg);
+    background-size: 100% 100%;
+    height: clamp(40rem,100vh,40rem);
+    width: 100vw;
+    #nav-header {
+        text-align: center;
+        word-wrap: wrap;
+        word-spacing: 2rem;
+        letter-spacing: 0.8rem;
+        color: white;
+        font-family: $header-font;
+        font-size: 2.8rem;
+        font-weight: 900;
+    }
+    #arrow-down {
+        position: absolute;
+        top:  17.5rem;
+        left: 48%;  
+        height: 7rem;
+        width: 1.9rem;
+    }
+    .nav-container {
+        @include flex();
+        margin:15px 15px;
+        .logo {
+            width: 10rem;
+        }
+        .nav-links-container {
+            @include flex();
+            column-gap: 0.5rem;
+            .nav-links {
+                text-decoration: none;
+                padding:10px 20px;
+                border-radius: 30px;
+                color: white;
+
+                &:hover {
+                    background-color: white;
+                    opacity: 0.7;
+                    color: black;
+                }
+            }
+            .special-link {
+                background-color: white;
+                padding: 15px 25px;
+                font-family: $header-font;
+                text-transform: uppercase;
+                color: black;
+                margin-left: 1rem;
+            }
+            #close {
+                display: none;
+            }
+        }
+        #hamburger {
+            display: none;
+        }
+    }
+}
+
+// main section styling
+
+#main-section {
+    display: flex;
+    flex-direction: column;
+
+    .each-description-container {
+        display: flex;
+        .product-description-texts {
+            width: 50vw;
+            height: clamp(30rem,80vh,32rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding:2rem 6rem ;
+            h1 {
+                font-family: $header-font;
+                font-size: 2.5rem;
+                line-height: 2.6rem;
+            }
+            p {
+                color: hsl(232, 10%, 55%);
+            }
+            h3 {
+                width: 7.5rem;
+                line-height: 1.3rem;
+                text-align: center;
+                position: relative;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            h3::after {
+                content: "";
+                background-color: rgba(255, 0, 0, 0.5);
+                position: absolute;
+                width: 100%;
+                height: 8px;
+                bottom: 0;
+                left: 0;
+                border-radius: 50px;
+            }
+            #yellow::after {
+                content: "";
+                background-color: rgba(255, 255, 0, 0.5);
+                position: absolute;
+                width: 100%;
+                height: 8px;
+                bottom: 0;
+                left: 0;
+                border-radius: 50px;
+            }
+        }
+        .description-image {
+            width: 50vw;
+            height: clamp(30rem,80vh,32rem);
+        }
+        .embedded-image-group {
+            display: flex;
+            height: clamp(28rem,80vh,32rem);
+            width: 50vw;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding:0 6rem ;
+            text-align: center;
+            padding-bottom: 2rem;
+            h2 {
+                font-family: $header-font;
+                font-size: 2rem;
+                text-transform: capitalize;
+            }
+        }
+        .graphic-design {
+            background-image: url(../images/desktop/image-graphic-design.jpg);
+            color: hsl(167, 40%, 24%);
+            background-size:100% 100%;
+        }
+        .photography {
+            background: url(../images/desktop/image-photography.jpg);
+            color: hsl(198, 62%, 26%);
+            background-size:100% 100%;
+        }
+    }
+    .client-testimonial-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:5rem 3rem;
+        color: hsl(213, 9%, 39%);
+
+        & > h1:first-child {
+            text-align: center;
+            font-family: $header-font;
+            text-transform: uppercase;
+        }
+        & > div {
+            display: flex;
+            flex-wrap: nowrap;
+            height: fit-content;
+            text-align: center;
+            column-gap: 2rem;
+            margin-top: 5rem;
+            align-items: center;
+            justify-content: space-between; 
+
+            .client-testimonials {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                row-gap: 1rem;
+                width: 18rem;
+                img {
+                    width: 5rem;
+                    border-radius: 50%;
+                }
+                div {
+                    display: flex;
+                    flex-direction: column;
+
+                    .client-name {
+                        color: black;
+                        font-family: $header-font;
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    .all-image{
+        display: flex;
+        img {
+            width: 25vw;
+            height: clamp(23rem, 50vh, 25rem);
+        }
+    }
+
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(169, 49%, 66%);
+    row-gap: 2.5rem;
+    padding: 2rem;
+    height: clamp(20rem,45vh,25rem);
+    .svg {
+        fill: hsl(167, 40%, 24%);
+    }
+    & > div:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 4rem;
+        .footer-links {
+            text-decoration: none;
+            color: hsl(167, 40%, 24%);
+        }
+    }
+    & > div:last-child {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        column-gap: 2rem;
+    }
+}
+
+// Responsive design
+@media only screen  and (max-width: 1000px) {
+    #main-section {
+        .client-testimonial-section {
+            align-items: center;
+            & > div {
+                justify-content: center;
+                .client-testimonials {
+                    width: fit-content;
+                }
+            }
+        }
+    }
+}
+@media only screen  and (max-width: 900px) {
+    #main-section {
+        .each-description-container {
+            .product-description-texts {
+                padding:2rem 3rem;
+            }
+        }
+    }
+}
+
+@media only screen  and (max-width: 800px) {
+    #header {
+        .nav-container {
+            .nav-links-container {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: fixed;
+                right: 0;
+                top: 0;
+                height: 100vh;
+                width: clamp(15rem,50vw,25rem);
+                background-color: white;
+                padding:2rem;
+                z-index: 2;
+                .nav-links {
+                    color: black;
+                    &:hover {
+                        background-color: yellow;
+                        opacity: 1;
+                    }
+                }
+                #close {
+                    display: flex;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                .special-link {
+                    background-color: yellow;
+                    opacity: 0.7;
+                }
+            }
+            #hamburger {
+                display: flex;
+            }
+        }
+    }
+    #main-section {
+        .each-description-container {
+            .embedded-image-group {
+                padding: 0 2rem;
+                padding-bottom: 2rem;
+            }
+        }
+        .client-testimonial-section {
+            & > div {
+                flex-wrap: wrap;
+                .client-testimonials {
+                    width: 18rem;
+                }
+            }
+        }
+    }
+    footer {
+        height: clamp(15rem,35vh,15rem);
+    }
+}
+@media only screen  and (max-width: 600px) {
+    #main-section {
+        .each-description-container {
+            flex-direction: column-reverse;
+            .product-description-texts {
+                width: 100vw;
+                text-align: center;
+                align-items: center;
+            }
+            .description-image, .embedded-image-group {
+                width: 100vw;
+            }
+        }
+        .non-reverse {
+            flex-direction: column;
+        }
+        .all-image {
+            img {
+                height: clamp(15rem,35vh,15rem);
+                width: 50vw;
+            }
+        }
+    }
+}
+
+@media only screen  and (max-width: 500px) {
+    #header {
+        #nav-header {
+            word-spacing: 1rem;
+            font-size: clamp(2rem,7vw,2.5rem);
+            line-height: 3rem;
+        }
+    }
+    #main-section {
+        .each-description-container {
+            .product-description-texts{
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+@media only screen  and (max-width: 390px) {
+    #header {
+        background-image: url(../images/mobile/image-header.jpg);
+        height: clamp(30rem,100vh,35rem);
+        .nav-container {
+            .nav-links-container {
+                top: 4rem;
+                width: 80vw;
+                left: 10%;
+                height: clamp(15rem,60vh,20rem);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    border-bottom: 20px solid floralwhite;
+                    border-left: 20px solid transparent;
+                    width: 0;
+                    height: 0;
+                    top: -1.2rem;
+                    right: 0;
+                  }
+                #close {
+                    display: none;
+                }
+            }
+        }
+        #arrow-down {
+            top: clamp(16rem,53vh,19rem);
+            width: 1.3rem;
+            height: 6rem;
+        }
+    }
+    #main-section {
+        .each-description-container {
+            .product-description-texts {
+                padding: 1rem;
+                height: fit-content;
+            }
+            .graphic-design {
+                background-image: url(../images/mobile/image-graphic-design.jpg);
+                background-size: 100% 100%;
+            }
+            .photography {
+                background-image: url(../images/mobile/image-photography.jpg);
+                background-size: 100% 100%;
+            }
+        }
+        .client-testimonial-section {
+            padding: 2rem 0.5rem;
+        }
+    }
+}
+@media only screen  and (max-width: 358px) {
+    footer {
+        height: fit-content;
+        & > div:nth-child(2) {
+            column-gap: 2rem;
+        }
+    }
+}
+@media only screen  and (max-width: 306px) {
+    body {
+        font-size: 0.8rem;
+    }
+    #header {
+        #nav-header {
+            font-size: 1.5rem;
+            word-spacing: 0.5rem;
+            letter-spacing: 0.1rem;
+        }
+    }
+    #main-section {
+        .each-description-container {
+            .product-description-texts {
+                height: fit-content;
+                h1 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .client-testimonial-section {
+            div {
+                .client-testimonials {
+                    width: fit-content;
+                }
+            }
+        }
+    }
+    footer {
+        height: fit-content;
+        & > div:nth-child(2) {
+            column-gap: 1rem;
+        }
+        & > div:nth-child(3) {
+            column-gap: 1rem;
+        }
+    }
+}
