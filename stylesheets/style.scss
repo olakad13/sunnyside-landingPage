@@ -96,7 +96,7 @@ body {
         display: flex;
         .product-description-texts {
             width: 50vw;
-            height: clamp(30rem,80vh,32rem);
+            height: 31rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -140,7 +140,7 @@ body {
         }
         .description-image {
             width: 50vw;
-            height: clamp(30rem,80vh,32rem);
+            height: 31rem;
         }
         .embedded-image-group {
             display: flex;
