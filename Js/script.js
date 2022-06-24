@@ -9,6 +9,7 @@ let descriptionText = document.getElementsByClassName("product-description-texts
 // Adding an event listner to the hamburger menu and the close menu
 menu.addEventListener("click", displayNavCard);
 closeBtn.addEventListener("click", closeNavCard);
+window.addEventListener('orientationchange', orientationChange);
 
 
 // checking if the screen width is less than or equal to
@@ -35,4 +36,8 @@ function displayNavCard() {
 // navigation card close function
 function closeNavCard() {
     navCard[0].style.display = "none"
+}
+function orientationChange() {
+    descriptionImage[0].style.height = descriptionText[0].offsetHeight + "px"
+    descriptionImage[1].style.height = descriptionText[0].offsetHeight + "px"
 }
