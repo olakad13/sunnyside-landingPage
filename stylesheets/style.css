@@ -139,7 +139,7 @@ body {
 
 #main-section .each-description-container .product-description-texts {
   width: 50vw;
-  height: clamp(30rem, 80vh, 32rem);
+  height: 31rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,7 +196,7 @@ body {
 
 #main-section .each-description-container .description-image {
   width: 50vw;
-  height: clamp(30rem, 80vh, 32rem);
+  height: 31rem;
 }
 
 #main-section .each-description-container .embedded-image-group {
