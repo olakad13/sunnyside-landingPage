@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 body {
@@ -15,20 +13,14 @@ body {
 }
 
 #header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   row-gap: 2.5rem;
   background-image: url(../images/desktop/image-header.jpg);
   background-size: 100% 100%;
   height: clamp(40rem, 100vh, 40rem);
-  width: 100vw;
+  width: 100%;
 }
-
 #header #nav-header {
   text-align: center;
   word-wrap: wrap;
@@ -39,7 +31,6 @@ body {
   font-size: 2.8rem;
   font-weight: 900;
 }
-
 #header #arrow-down {
   position: absolute;
   top: 17.5rem;
@@ -47,63 +38,37 @@ body {
   height: 7rem;
   width: 1.9rem;
 }
-
 #header .nav-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   margin: 15px 15px;
 }
-
 #header .nav-container .logo {
   width: 10rem;
 }
-
 #header .nav-container .nav-links-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 0.5rem;
-          column-gap: 0.5rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
-
 #header .nav-container .nav-links-container .nav-links {
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 30px;
   color: white;
 }
-
 #header .nav-container .nav-links-container .nav-links:hover {
   background-color: white;
   opacity: 0.7;
   color: black;
 }
-
 #header .nav-container .nav-links-container .special-link {
   background-color: white;
   padding: 15px 25px;
@@ -112,57 +77,36 @@ body {
   color: black;
   margin-left: 1rem;
 }
-
 #header .nav-container .nav-links-container #close {
   display: none;
 }
-
 #header .nav-container #hamburger {
   display: none;
 }
 
 #main-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 #main-section .each-description-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #main-section .each-description-container .product-description-texts {
-  width: 50vw;
+  width: 50%;
   height: 31rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   padding: 2rem 6rem;
 }
-
 #main-section .each-description-container .product-description-texts h1 {
   font-family: "Fraunces", serif;
   font-size: 2.5rem;
   line-height: 2.6rem;
 }
-
 #main-section .each-description-container .product-description-texts p {
-  color: #818498;
+  color: hsl(232, 10%, 55%);
 }
-
 #main-section .each-description-container .product-description-texts h3 {
   width: 7.5rem;
   line-height: 1.3rem;
@@ -171,7 +115,6 @@ body {
   text-transform: uppercase;
   text-align: center;
 }
-
 #main-section .each-description-container .product-description-texts h3::after {
   content: "";
   background-color: rgba(255, 0, 0, 0.5);
@@ -182,7 +125,6 @@ body {
   left: 0;
   border-radius: 50px;
 }
-
 #main-section .each-description-container .product-description-texts #yellow::after {
   content: "";
   background-color: rgba(255, 255, 0, 0.5);
@@ -193,238 +135,149 @@ body {
   left: 0;
   border-radius: 50px;
 }
-
 #main-section .each-description-container .description-image {
-  width: 50vw;
+  width: 50%;
   height: 31rem;
 }
-
 #main-section .each-description-container .embedded-image-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: clamp(28rem, 80vh, 32rem);
-  width: 50vw;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 50%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   padding: 0 6rem;
   text-align: center;
   padding-bottom: 2rem;
 }
-
 #main-section .each-description-container .embedded-image-group h2 {
   font-family: "Fraunces", serif;
   font-size: 2rem;
   text-transform: capitalize;
 }
-
 #main-section .each-description-container .graphic-design {
   background-image: url(../images/desktop/image-graphic-design.jpg);
-  color: #25564b;
+  color: hsl(167, 40%, 24%);
   background-size: 100% 100%;
 }
-
 #main-section .each-description-container .photography {
   background: url(../images/desktop/image-photography.jpg);
-  color: #19536b;
+  color: hsl(198, 62%, 26%);
   background-size: 100% 100%;
 }
-
 #main-section .client-testimonial-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   padding: 5rem 3rem;
-  color: #5a636c;
+  color: hsl(213, 9%, 39%);
 }
-
 #main-section .client-testimonial-section > h1:first-child {
   text-align: center;
   font-family: "Fraunces", serif;
   text-transform: uppercase;
 }
-
 #main-section .client-testimonial-section > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  height: -webkit-fit-content;
+  flex-wrap: nowrap;
   height: -moz-fit-content;
   height: fit-content;
   text-align: center;
-  -webkit-column-gap: 2rem;
-          column-gap: 2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
   margin-top: 5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
-
 #main-section .client-testimonial-section > div .client-testimonials {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   row-gap: 1rem;
   width: 18rem;
 }
-
 #main-section .client-testimonial-section > div .client-testimonials img {
   width: 5rem;
   border-radius: 50%;
 }
-
 #main-section .client-testimonial-section > div .client-testimonials div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 #main-section .client-testimonial-section > div .client-testimonials div .client-name {
   color: black;
   font-family: "Fraunces", serif;
   font-size: 1.2rem;
   font-weight: 700;
 }
-
 #main-section .all-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #main-section .all-image img {
-  width: 25vw;
+  width: 25%;
   height: clamp(23rem, 50vh, 25rem);
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #7ed3c3;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(169, 49%, 66%);
   row-gap: 2.5rem;
   padding: 2rem;
   height: clamp(20rem, 45vh, 25rem);
 }
-
 footer .svg {
-  fill: #25564b;
+  fill: hsl(167, 40%, 24%);
 }
-
 footer > div:nth-child(2) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 4rem;
-          column-gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
 }
-
 footer > div:nth-child(2) .footer-links {
   text-decoration: none;
-  color: #25564b;
+  color: hsl(167, 40%, 24%);
 }
-
 footer > div:last-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   text-align: center;
-  -webkit-column-gap: 2rem;
-          column-gap: 2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
 }
 
 @media only screen and (max-width: 1000px) {
   #main-section .client-testimonial-section {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   #main-section .client-testimonial-section > div {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   #main-section .client-testimonial-section > div .client-testimonials {
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
 }
-
 @media only screen and (max-width: 900px) {
   #main-section .each-description-container .product-description-texts {
     padding: 2rem 3rem;
   }
 }
-
 @media only screen and (max-width: 800px) {
   #header .nav-container .nav-links-container {
     display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
     right: 0;
     top: 0;
     height: 100vh;
-    width: clamp(15rem, 50vw, 25rem);
+    width: clamp(15rem, 50%, 25rem);
     background-color: white;
     padding: 2rem;
     z-index: 2;
@@ -437,8 +290,6 @@ footer > div:last-child {
     opacity: 1;
   }
   #header .nav-container .nav-links-container #close {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     position: absolute;
     right: 0;
@@ -449,8 +300,6 @@ footer > div:last-child {
     opacity: 0.7;
   }
   #header .nav-container #hamburger {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   #main-section .each-description-container .embedded-image-group {
@@ -458,8 +307,7 @@ footer > div:last-child {
     padding-bottom: 2rem;
   }
   #main-section .client-testimonial-section > div {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   #main-section .client-testimonial-section > div .client-testimonials {
     width: 18rem;
@@ -468,36 +316,26 @@ footer > div:last-child {
     height: clamp(15rem, 35vh, 15rem);
   }
 }
-
 @media only screen and (max-width: 600px) {
   #main-section .each-description-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   #main-section .each-description-container .product-description-texts {
-    width: 100vw;
+    width: 100%;
     text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   #main-section .each-description-container .description-image, #main-section .each-description-container .embedded-image-group {
-    width: 100vw;
+    width: 100%;
   }
   #main-section .non-reverse {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   #main-section .all-image img {
     height: clamp(15rem, 35vh, 15rem);
-    width: 50vw;
+    width: 50%;
   }
 }
-
 @media only screen and (max-width: 500px) {
   #header #nav-header {
     word-spacing: 1rem;
@@ -508,7 +346,6 @@ footer > div:last-child {
     font-size: 2rem;
   }
 }
-
 @media only screen and (max-width: 390px) {
   #header {
     background-image: url(../images/mobile/image-header.jpg);
@@ -516,7 +353,7 @@ footer > div:last-child {
   }
   #header .nav-container .nav-links-container {
     top: 4rem;
-    width: 80vw;
+    width: 80%;
     left: 10%;
     height: clamp(15rem, 60vh, 20rem);
   }
@@ -540,7 +377,6 @@ footer > div:last-child {
   }
   #main-section .each-description-container .product-description-texts {
     padding: 1rem;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -556,19 +392,16 @@ footer > div:last-child {
     padding: 2rem 0.5rem;
   }
 }
-
 @media only screen and (max-width: 358px) {
   footer {
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
   footer > div:nth-child(2) {
-    -webkit-column-gap: 2rem;
-            column-gap: 2rem;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
 }
-
 @media only screen and (max-width: 306px) {
   body {
     font-size: 0.8rem;
@@ -579,7 +412,6 @@ footer > div:last-child {
     letter-spacing: 0.1rem;
   }
   #main-section .each-description-container .product-description-texts {
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -587,22 +419,19 @@ footer > div:last-child {
     font-size: 1.5rem;
   }
   #main-section .client-testimonial-section div .client-testimonials {
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
   footer {
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
   footer > div:nth-child(2) {
-    -webkit-column-gap: 1rem;
-            column-gap: 1rem;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
   }
   footer > div:nth-child(3) {
-    -webkit-column-gap: 1rem;
-            column-gap: 1rem;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

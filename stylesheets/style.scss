@@ -29,7 +29,7 @@ body {
     background-image: url(../images/desktop/image-header.jpg);
     background-size: 100% 100%;
     height: clamp(40rem,100vh,40rem);
-    width: 100vw;
+    width: 100%;
     #nav-header {
         text-align: center;
         word-wrap: wrap;
@@ -95,7 +95,7 @@ body {
     .each-description-container {
         display: flex;
         .product-description-texts {
-            width: 50vw;
+            width: 50%;
             height: 31rem;
             display: flex;
             flex-direction: column;
@@ -139,13 +139,13 @@ body {
             }
         }
         .description-image {
-            width: 50vw;
+            width: 50%;
             height: 31rem;
         }
         .embedded-image-group {
             display: flex;
             height: clamp(28rem,80vh,32rem);
-            width: 50vw;
+            width: 50%;
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
@@ -219,7 +219,7 @@ body {
     .all-image{
         display: flex;
         img {
-            width: 25vw;
+            width: 25%;
             height: clamp(23rem, 50vh, 25rem);
         }
     }
@@ -290,7 +290,7 @@ footer {
                 right: 0;
                 top: 0;
                 height: 100vh;
-                width: clamp(15rem,50vw,25rem);
+                width: clamp(15rem,50%,25rem);
                 background-color: white;
                 padding:2rem;
                 z-index: 2;
@@ -342,12 +342,12 @@ footer {
         .each-description-container {
             flex-direction: column-reverse;
             .product-description-texts {
-                width: 100vw;
+                width: 100%;
                 text-align: center;
                 align-items: center;
             }
             .description-image, .embedded-image-group {
-                width: 100vw;
+                width: 100%;
             }
         }
         .non-reverse {
@@ -356,7 +356,7 @@ footer {
         .all-image {
             img {
                 height: clamp(15rem,35vh,15rem);
-                width: 50vw;
+                width: 50%;
             }
         }
     }
@@ -387,7 +387,7 @@ footer {
         .nav-container {
             .nav-links-container {
                 top: 4rem;
-                width: 80vw;
+                width: 80%;
                 left: 10%;
                 height: clamp(15rem,60vh,20rem);
                 &::before {
